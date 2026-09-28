@@ -1,0 +1,30 @@
+diff --git a/src/hev-socks5-tunnel.c b/src/hev-socks5-tunnel.c
+index 797730d..cdf5e1c 100644
+--- a/src/hev-socks5-tunnel.c
++++ b/src/hev-socks5-tunnel.c
+@@ -627,6 +627,10 @@ mapped_dns_init (void)
+     if (!cache_size)
+         return 0;
+ 
++    dns = hev_mapped_dns_get ();
++    if (dns)
++        return 0;
++
+     dns = hev_mapped_dns_new (network, netmask, cache_size);
+     if (!dns)
+         return -1;
+@@ -641,13 +645,7 @@ mapped_dns_init (void)
+ static void
+ mapped_dns_fini (void)
+ {
+-    HevMappedDNS *dns;
+-
+-    dns = hev_mapped_dns_get ();
+-    if (dns) {
+-        hev_object_unref (HEV_OBJECT (dns));
+-        hev_mapped_dns_put (NULL);
+-    }
++    /* Keep the process-global map alive across tunnel restarts. */
+ }
+ 
+ int
