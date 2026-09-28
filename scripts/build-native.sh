@@ -6,15 +6,15 @@ repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 ndk="${ANDROID_NDK_HOME:-$(find "$ANDROID_HOME/ndk" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -1)}"
 : "${ndk:?Install Android NDK first}"
 hev_source="$repo/build/native/hev-socks5-tunnel"
-hev_commit="9a06bc6e7989da54e3d32ff701ef7a7ce4995d3a"
+hev_tag="2.17.1"
 
 if [[ ! -d "$hev_source/.git" ]]; then
     mkdir -p "$(dirname "$hev_source")"
-    git clone --depth 1 --branch 2.17.1 --recurse-submodules \
+    git clone --depth 1 --branch "$hev_tag" --recurse-submodules \
         https://github.com/heiher/hev-socks5-tunnel "$hev_source"
 fi
-if [[ "$(git -C "$hev_source" rev-parse HEAD)" != "$hev_commit" ]]; then
-    echo "hev-socks5-tunnel must be at $hev_commit" >&2
+if [[ "$(git -C "$hev_source" rev-parse HEAD)" != "$(git -C "$hev_source" rev-parse "refs/tags/$hev_tag^{commit}")" ]]; then
+    echo "hev-socks5-tunnel must be at tag $hev_tag" >&2
     exit 1
 fi
 git -C "$hev_source" submodule update --init --recursive
