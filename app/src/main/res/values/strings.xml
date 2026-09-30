@@ -1,49 +1,92 @@
 <resources>
     <string name="app_name">HP VPN</string>
-    <string name="page_title">HP VPN · %1$s</string>
-    <string name="home">Home</string>
-    <string name="apps">Apps</string>
+
+    <!-- navigation -->
+    <string name="tab_connect">Connect</string>
+    <string name="tab_routing">Routing</string>
     <string name="logs">Logs</string>
-    <string name="ok">OK</string>
-    <string name="notice">Notice</string>
+
+    <!-- connect screen -->
     <string name="connect">Connect</string>
     <string name="stop">Stop</string>
     <string name="disconnected">Disconnected</string>
     <string name="connected">Connected</string>
     <string name="failed">Failed</string>
+    <string name="set_profile">Profile</string>
+    <string name="set_routing">Routing</string>
+    <string name="profile_none">None selected</string>
+    <string name="profiles_empty_title">No profile yet</string>
+    <string name="profiles_empty_body">Import a JSON profile from the clipboard, or enter the server address and password manually.</string>
+    <string name="vpn_profile_required">Create and select a profile first</string>
+    <string name="include_apps_required">Select at least one installed app for selected-app routing</string>
+
+    <!-- profiles -->
+    <string name="choose_profile">Choose profile</string>
     <string name="new_profile">New profile</string>
     <string name="edit_profile">Edit profile</string>
     <string name="import_clipboard">Import from clipboard</string>
-    <string name="profiles">Profiles</string>
-    <string name="edit">Edit</string>
-    <string name="delete">Delete</string>
-    <string name="routing_mode">Routing mode</string>
-    <string name="route_global">Global proxy</string>
-    <string name="route_include">Proxy selected apps only</string>
-    <string name="route_exclude">Bypass selected apps</string>
+    <string name="back">Back</string>
     <string name="name">Name</string>
     <string name="server_hint">server (host:port)</string>
     <string name="password">password</string>
     <string name="cert_hint">cert PEM (optional)</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="delete_profile_title">Delete profile?</string>
+    <string name="delete_profile_message">%1$s will be deleted.</string>
+    <string name="show_password">Show</string>
+    <string name="hide_password">Hide</string>
+    <string name="paste_from_clipboard">Paste from clipboard</string>
+    <string name="server_helper">Format: host:port, for example hk.example.com:443</string>
+    <string name="cert_helper">Optional. Leave empty to use Android trusted certificates.</string>
+    <string name="error_server">Enter the server as host:port</string>
+    <string name="error_password">Password must not be empty</string>
+    <string name="error_cert">Not a valid X.509 PEM certificate</string>
+
+    <!-- routing -->
+    <string name="route_global">Global</string>
+    <string name="route_include">Selected only</string>
+    <string name="route_exclude">Bypass selected</string>
+    <string name="route_global_desc">All apps are proxied except HP VPN itself.</string>
+    <string name="route_include_desc">Only the checked apps are proxied; everything else connects directly.</string>
+    <string name="route_exclude_desc">The checked apps connect directly; everything else is proxied.</string>
+    <string name="global_note_title">Global proxy is on</string>
+    <string name="global_note_body">Every app is already proxied, so there is nothing to select here. Switch to “Selected only” or “Bypass selected” to route individual apps.</string>
     <string name="search_apps">Search app name or package</string>
+    <string name="clear_search">Clear search</string>
     <string name="filter_all">All</string>
     <string name="filter_user">User</string>
     <string name="filter_system">System</string>
-    <string name="clear">Clear</string>
+    <string name="selected_count">Selected %1$d</string>
+    <string name="section_selected_apps">Selected apps</string>
+    <string name="section_other_apps">Other apps</string>
+    <string name="section_apps">Apps</string>
+    <string name="apps_empty">No apps with internet access</string>
+    <string name="apps_no_match">No matching apps</string>
+    <string name="clear_filter">Clear filter</string>
+
+    <!-- logs -->
+    <string name="search_logs">Search logs</string>
+    <string name="logs_empty">No logs yet</string>
     <string name="copy">Copy</string>
+    <string name="clear">Clear</string>
+    <string name="clear_logs_title">Clear logs?</string>
+    <string name="clear_logs_message">All captured logs will be removed.</string>
     <string name="logs_copied">Logs copied</string>
+
+    <!-- errors -->
     <string name="clipboard_empty">The clipboard does not contain text</string>
     <string name="import_failed">Import failed</string>
     <string name="config_read_failed">Could not read the configuration</string>
     <string name="save_failed">Could not save the configuration</string>
-    <string name="password_required">password must not be empty</string>
+
+    <!-- vpn service -->
     <string name="vpn_channel">VPN status</string>
-    <string name="vpn_profile_required">Create and select a profile first</string>
     <string name="vpn_establish_failed">Android could not establish the VPN interface</string>
     <string name="hev_start_failed">hev failed to start</string>
-    <string name="include_apps_required">Select at least one installed app for selected-app routing</string>
     <string name="system_certs_unavailable">Could not read system certificates</string>
     <string name="system_certs_empty">The system certificate list is empty</string>
 </resources>
