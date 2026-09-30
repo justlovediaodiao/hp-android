@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Launcher icon foreground (adaptive icon, 108x108 viewport).
+
+  Source of truth: logo/ic_launcher.svg — edit that file and re-export this one.
+
+  The 12 degree clockwise tilt and the 2.8x scale are baked into the path
+  coordinates (no <group> transform), so the gradient cannot be affected by
+  group matrix handling. Geometry: content is centred on (54,54) and its
+  furthest point is 30.98 from the centre, inside the 33 radius safe circle.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:pathData="M63.69 24.57 L40.59 55.16 L51.54 57.49 L44.31 83.43 L67.41 52.84 L56.46 50.51 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="23.53"
+                android:startY="76.15"
+                android:endX="84.47"
+                android:endY="31.85"
+                android:startColor="#FF1565C0"
+                android:endColor="#FF7C4DFF" />
+        </aapt:attr>
+    </path>
+</vector>

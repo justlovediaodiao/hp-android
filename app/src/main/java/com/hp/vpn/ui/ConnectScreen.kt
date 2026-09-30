@@ -142,7 +142,9 @@ private fun ConnectButton(
         failed -> scheme.onErrorContainer
         else -> scheme.onPrimaryContainer
     }
-    Box(contentAlignment = Alignment.Center) {
+    // Fixed-size container in both states: the decorative halo must not change the layout,
+    // otherwise the status text below shifts up and down when connecting.
+    Box(Modifier.size(190.dp), contentAlignment = Alignment.Center) {
         if (connected) {
             Box(Modifier.size(190.dp).background(scheme.tertiary.copy(alpha = 0.16f), CircleShape))
         }
