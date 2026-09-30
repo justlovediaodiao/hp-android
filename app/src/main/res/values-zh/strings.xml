@@ -1,49 +1,90 @@
 <resources>
     <string name="app_name">HP VPN</string>
-    <string name="page_title">HP VPN · %1$s</string>
-    <string name="home">首页</string>
-    <string name="apps">应用</string>
+
+    <!-- navigation -->
+    <string name="tab_connect">连接</string>
+    <string name="tab_routing">分流</string>
     <string name="logs">日志</string>
-    <string name="ok">确定</string>
-    <string name="notice">提示</string>
+
+    <!-- connect screen -->
     <string name="connect">连接</string>
     <string name="stop">停止</string>
     <string name="disconnected">未连接</string>
     <string name="connected">已连接</string>
     <string name="failed">连接失败</string>
+    <string name="set_profile">当前配置</string>
+    <string name="set_routing">分流</string>
+    <string name="profile_none">未选择</string>
+    <string name="profiles_empty_title">还没有配置</string>
+    <string name="profiles_empty_body">从剪贴板粘贴 JSON 一键导入，或手动填写服务器地址与密码。</string>
+    <string name="vpn_profile_required">请先新建并选择配置</string>
+    <string name="include_apps_required">仅选中应用模式至少需要选择一个已安装应用</string>
+
+    <!-- profiles -->
+    <string name="choose_profile">选择配置</string>
     <string name="new_profile">新建配置</string>
     <string name="edit_profile">编辑配置</string>
     <string name="import_clipboard">从剪贴板导入</string>
-    <string name="profiles">配置</string>
-    <string name="edit">编辑</string>
-    <string name="delete">删除</string>
-    <string name="routing_mode">路由模式</string>
-    <string name="route_global">全局代理</string>
-    <string name="route_include">仅选中的应用走代理</string>
-    <string name="route_exclude">选中的应用直连</string>
+    <string name="back">返回</string>
     <string name="name">名称</string>
-    <string name="server_hint">server (主机:端口)</string>
+    <string name="server_hint">server（主机:端口）</string>
     <string name="password">password</string>
     <string name="cert_hint">cert PEM（可留空）</string>
     <string name="save">保存</string>
     <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="delete_profile_title">删除配置？</string>
+    <string name="delete_profile_message">将删除「%1$s」。</string>
+    <string name="show_password">显示</string>
+    <string name="hide_password">隐藏</string>
+    <string name="server_helper">格式为 主机:端口，例如 hk.example.com:443</string>
+    <string name="cert_helper">可留空，留空时使用 Android 受信任证书。</string>
+    <string name="error_server">请填写为 主机:端口</string>
+    <string name="error_password">密码不能为空</string>
+    <string name="error_cert">不是有效的 X.509 PEM 证书</string>
+
+    <!-- routing -->
+    <string name="route_global">全局</string>
+    <string name="route_include">仅选中</string>
+    <string name="route_exclude">绕过选中</string>
+    <string name="route_global_desc">所有应用的流量都走代理（本应用除外）。</string>
+    <string name="route_include_desc">只有勾选的应用走代理，其余直连。</string>
+    <string name="route_exclude_desc">勾选的应用直连，其余走代理。</string>
+    <string name="global_note_title">当前为全局代理</string>
+    <string name="global_note_body">所有应用都已经走代理，无需选择应用。切换到「仅选中」或「绕过选中」即可单独控制某个应用。</string>
     <string name="search_apps">搜索应用名或包名</string>
+    <string name="clear_search">清除搜索</string>
     <string name="filter_all">全部</string>
     <string name="filter_user">用户</string>
     <string name="filter_system">系统</string>
-    <string name="clear">清空</string>
+    <string name="selected_count">已选 %1$d</string>
+    <string name="section_selected_apps">已选应用</string>
+    <string name="section_other_apps">其他应用</string>
+    <string name="section_apps">应用</string>
+    <string name="apps_empty">没有可用的应用</string>
+    <string name="apps_no_match">没有匹配的应用</string>
+    <string name="clear_filter">清除筛选</string>
+
+    <!-- logs -->
+    <string name="logs_empty">暂无日志</string>
     <string name="copy">复制</string>
+    <string name="clear">清空</string>
+    <string name="clear_logs_title">清空日志？</string>
+    <string name="clear_logs_message">已捕获的日志将被全部删除。</string>
     <string name="logs_copied">日志已复制</string>
+
+    <!-- errors -->
     <string name="clipboard_empty">剪贴板中没有文本</string>
     <string name="import_failed">导入失败</string>
     <string name="config_read_failed">无法读取配置</string>
     <string name="save_failed">无法保存配置</string>
-    <string name="password_required">password 不能为空</string>
+
+    <!-- vpn service -->
     <string name="vpn_channel">VPN 状态</string>
-    <string name="vpn_profile_required">请先新建并选择配置</string>
     <string name="vpn_establish_failed">系统无法建立 VPN 接口</string>
     <string name="hev_start_failed">hev 无法启动</string>
-    <string name="include_apps_required">仅选中应用模式至少需要选择一个已安装应用</string>
     <string name="system_certs_unavailable">无法读取系统证书</string>
     <string name="system_certs_empty">系统证书列表为空</string>
 </resources>

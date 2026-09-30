@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Monochrome layer for themed icons (Android 13+). The system tints it, so the
+  shape is drawn in solid black. Same geometry as ic_launcher_foreground.xml.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M63.69 24.57 L40.59 55.16 L51.54 57.49 L44.31 83.43 L67.41 52.84 L56.46 50.51 Z" />
+</vector>
