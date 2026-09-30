@@ -39,7 +39,6 @@
     <string name="delete_profile_message">将删除「%1$s」。</string>
     <string name="show_password">显示</string>
     <string name="hide_password">隐藏</string>
-    <string name="paste_from_clipboard">从剪贴板粘贴</string>
     <string name="server_helper">格式为 主机:端口，例如 hk.example.com:443</string>
     <string name="cert_helper">可留空，留空时使用 Android 受信任证书。</string>
     <string name="error_server">请填写为 主机:端口</string>
@@ -69,7 +68,6 @@
     <string name="clear_filter">清除筛选</string>
 
     <!-- logs -->
-    <string name="search_logs">搜索日志</string>
     <string name="logs_empty">暂无日志</string>
     <string name="copy">复制</string>
     <string name="clear">清空</string>

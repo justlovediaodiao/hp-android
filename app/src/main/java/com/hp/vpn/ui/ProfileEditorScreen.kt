@@ -1,6 +1,5 @@
 package com.hp.vpn.ui
 
-import android.content.ClipboardManager
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -30,7 +29,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
@@ -46,7 +44,6 @@ fun ProfileEditorScreen(
     onSave: (Profile) -> Unit,
     onDelete: (() -> Unit)?,
 ) {
-    val context = LocalContext.current
     val editorKey = original?.id ?: "new"
     var name by rememberSaveable(editorKey) { mutableStateOf(original?.name.orEmpty()) }
     var server by rememberSaveable(editorKey) { mutableStateOf(original?.server.orEmpty()) }
@@ -160,16 +157,6 @@ fun ProfileEditorScreen(
                     minLines = 4,
                     modifier = Modifier.fillMaxWidth(),
                 )
-                TextButton(
-                    onClick = {
-                        val clipboard = context.getSystemService(ClipboardManager::class.java)
-                        clipboard.primaryClip?.getItemAt(0)?.coerceToText(context)?.toString()
-                            ?.let { cert = it.trim() }
-                    },
-                    modifier = Modifier.align(Alignment.End),
-                ) {
-                    Text(stringResource(R.string.paste_from_clipboard))
-                }
             }
             Button(
                 onClick = {

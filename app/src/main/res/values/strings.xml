@@ -39,7 +39,6 @@
     <string name="delete_profile_message">%1$s will be deleted.</string>
     <string name="show_password">Show</string>
     <string name="hide_password">Hide</string>
-    <string name="paste_from_clipboard">Paste from clipboard</string>
     <string name="server_helper">Format: host:port, for example hk.example.com:443</string>
     <string name="cert_helper">Optional. Leave empty to use Android trusted certificates.</string>
     <string name="error_server">Enter the server as host:port</string>
@@ -69,7 +68,6 @@
     <string name="clear_filter">Clear filter</string>
 
     <!-- logs -->
-    <string name="search_logs">Search logs</string>
     <string name="logs_empty">No logs yet</string>
     <string name="copy">Copy</string>
     <string name="clear">Clear</string>
