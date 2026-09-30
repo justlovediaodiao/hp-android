@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  HP VPN launcher icon — 原始矢量稿（108x108，自适应图标坐标系）。
-
-  这份 SVG 是图标的唯一手工维护来源；Android 侧的
-  app/src/main/res/drawable/ic_launcher_foreground.xml 由它导出，改动请改这里再同步。
-
-  图层：
-    #background  白色底（对应 res/values/colors.xml 的 ic_launcher_background）
-    #foreground  闪电图形（对应 res/drawable/ic_launcher_foreground.xml，可单独取用）
-
-  坐标说明：108x108 画布，中心 (54,54)。系统遮罩会保留中央 72x72 的可见区，
-  图形最远点距中心 30.98，落在 33 半径的安全圆内，任何遮罩下都不会被切到。
--->
 <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
   <defs>
-    <!-- 品牌蓝 -> 紫，方向为左下 -> 右上 -->
     <linearGradient id="boltGradient" gradientUnits="userSpaceOnUse"
         x1="23.53" y1="76.15" x2="84.47" y2="31.85">
       <stop offset="0" stop-color="#1565C0"/>
